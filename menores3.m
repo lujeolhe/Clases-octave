@@ -4,8 +4,8 @@
  
 close all %cerrar toda las figuras
 function b=menores3(a,k,m)
-  v=2:length(a)-k+1;
-  v_aux=v;
+  v=2:length(a)-k+1
+  v_aux=v
   if m==1
     b=a(v,v);
   endif
@@ -18,13 +18,13 @@ function b=menores3(a,k,m)
   else 
    for c=2:m
      c;
-    v_aux;
+    v_aux
     if mod(c,2)==0
-      v_aux(mod(c,length(a)))=v_aux(mod(c,length(a)))+1;
-      b=a(v_aux,v_aux);
+      v_aux(mod(c,length(a)))=v_aux(mod(c,length(a)))+1
+      b=a(v_aux,v_aux)
     else 
-      v_aux(mod(c-2,length(a)))=v_aux(mod(c-2,length(a)))-1;
-      b=a(v_aux,v_aux);
+      v_aux(mod(c-2,length(a)))=v_aux(mod(c-2,length(a)))-1
+      b=a(v_aux,v_aux)
     endif
     end
   endif
