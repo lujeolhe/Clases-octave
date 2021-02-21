@@ -70,14 +70,8 @@ ylabel('P_R1')
 max(Pr1)
 
 %%Calculo del VRMS
-figure 4
-plot(t,V_x.^2);
-kernel=V_x.^2*1/FM;
-figure 5
-plot(t,kernel);
-intV=sum(kernel)
-divV=intV/.1
-Vrms=sqrt(divV)
+
+
 
 
 %%Poner detalles a las graficas
