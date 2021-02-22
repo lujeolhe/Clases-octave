@@ -1,5 +1,5 @@
 %Ejercicio 2
-FM=1000; %Frecuencia de Muestreo de la Simulacion
+FM=10000; %Frecuencia de Muestreo de la Simulacion
 %Teorema de Nyquis o Teroema de Muetreo:
 %Para muetrear una señal de frecuencia f se requiere una frecuencia F de muetreo de almenos 2f, es decir F=2f
 %Para muetrear una señal de periodo t, se requiere un tiempo de muetreo de alemnos t/2
@@ -9,8 +9,8 @@ FM=1000; %Frecuencia de Muestreo de la Simulacion
 t=0:1/FM:.1;
 A=12;
 f=60;
-%V_x=A*sin(2*pi*f*t);
-V_x=A*ones(1,length(t));
+V_x=A*sin(2*pi*f*t);
+%V_x=A*ones(1,length(t));
 
 R1=100;
 R2=220;
@@ -78,8 +78,14 @@ plot(t,kernel);
 intV=sum(kernel)
 divV=intV/.1
 Vrms=sqrt(divV)
+figure 6
+plot(t,V_x,t,Vrms*ones(1,length(t)));
+title('Voltaje RMS')
+xlabel('t')
+ylabel('V_x')
+legend('V(t)','V_{RMS}');
 
 
-%%Poner detalles a las graficas
-%%Cada una separada
+%Hacer la integral del valor eficas a mano
+%hacer lo de el excel
 %Vrms
