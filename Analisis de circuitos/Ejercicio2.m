@@ -70,6 +70,7 @@ ylabel('P_R1')
 max(Pr1)
 
 %%Calculo del VRMS
+
 figure 4
 plot(t,V_x.^2);
 kernel=V_x.^2*1/FM;
@@ -84,6 +85,10 @@ title('Voltaje RMS')
 xlabel('t')
 ylabel('V_x')
 legend('V(t)','V_{RMS}');
+
+
+
+
 
 
 %Hacer la integral del valor eficas a mano
