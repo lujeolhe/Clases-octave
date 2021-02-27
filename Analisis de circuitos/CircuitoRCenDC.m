@@ -26,15 +26,6 @@ ylabel('V_x')
 legend('V(t)','V_{R1}','V_{C1}');
 axis([0,10,0,15])
 
-q_t=zeros(1,length(t));
-for i=2:FM+1
-  q_t(1,i)=(A-R1*q_t(1,i-1))/(R1*C1+1);  
-end
-figure 2
-plot(t,q_t);
-title('Señales de Voltajes')
-xlabel('t')
-ylabel('V_x')
 
 ##figure 2
 ##%Corriente directa
