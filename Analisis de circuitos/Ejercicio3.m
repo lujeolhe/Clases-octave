@@ -10,6 +10,7 @@ t=0:1/FM:.1;
 A=120;
 A1=9;
 f=60;
+w=2*pi*f;
 %Corriente alterna
 V_x=A*sin(2*pi*f*t);
 
@@ -17,7 +18,7 @@ R1=1000;
 C1=0.001;
 
 Vr1=A*exp(-t/(R1*C1));
-Vc1=A*(1-exp(-t/(R1*C1)));
+Vc1=((-A*w*R1^2*C1)/((w^2*R1^2*C1^2)+1))*exp(-t/(R1*C1))+((A*R1)/((w^2*R1^2*C1^2)+1))*sin(w*t)-((A*w*R1^2*C1)/((w^2*R1^2*C1^2)+1))*cos(w*t);
 
 plot(t,V_x,t,Vr1,t,Vc1);
 title('Señales de Voltajes')
