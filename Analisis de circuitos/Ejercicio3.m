@@ -17,8 +17,10 @@ V_x=A*sin(2*pi*f*t);
 R1=1000;
 C1=0.00001;
 
-Vr1=A*exp(-t/(R1*C1));
-Vc1=((-A*w*R1^2*C1)/((w^2*R1^2*C1^2)+1))*exp(-t/(R1*C1))+((A*R1)/((w^2*R1^2*C1^2)+1))*cos(w*t)-((A*w*R1^2*C1)/((w^2*R1^2*C1^2)+1))*sin(w*t);
+
+Vr1=((A*C1*R1)/((w^2*R1^2*C1^2)+1))*(-w*exp(-t/(R1*C1))+w*cos(w*t)+(w^2*R1*C1)*sin(w*t));
+Vc1=((A)/((w^2*R1^2*C1^2)+1))*(w*R1*C1*exp(-t/(R1*C1))+sin(w*t)-(w*R1*C1)*cos(w*t));
+
 
 plot(t,V_x,t,Vr1,t,Vc1);
 title('Señales de Voltajes')
