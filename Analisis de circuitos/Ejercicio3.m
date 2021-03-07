@@ -9,7 +9,7 @@ FM=1000; %Frecuencia de Muestreo de la Simulacion
 t=0:1/FM:.1;
 A=120;
 A1=9;
-f=60;
+f=20;
 w=2*pi*f;
 %Corriente alterna
 V_x=A*sin(2*pi*f*t);
