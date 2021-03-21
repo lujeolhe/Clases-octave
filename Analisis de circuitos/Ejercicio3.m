@@ -11,12 +11,12 @@ FM=10000; %Frecuencia de Muestreo de la Simulacion
 %%V=IR
 
 
-t=0:1/FM:.01;
+t=0:1/FM:.05;
 
 A=120;
 A1=9;
 
-f=100;
+f=60;
 
 w=2*pi*f;
 %Corriente alterna
@@ -39,6 +39,7 @@ xlabel('t')
 ylabel('V_x')
 legend('V(t)','V_{R1}','V_{C1}');
 
+V_x=A*cuad(2*pi*f*t);
 q_t=zeros(1,length(t));
 dq_t=zeros(1,length(t));
 
@@ -54,7 +55,7 @@ figure 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ok
 
-plot(t,V_x,t,q_t/C1,t,dq_t*R1);
+plot(t,V_x,t,q_t/C1,t,dq_t*R1,t, -V_x+q_t/C1+dq_t*R1);
 title('Señales de Voltajes Euler')
 xlabel('t')
 ylabel('V_x')
