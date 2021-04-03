@@ -23,12 +23,14 @@ R1=1;
 C1=0.001;
 
 
+
+
 Vr1=((-A*w*R1*C1)/((w^2*R1^2*C1^2)+1))*exp(-t/(R1*C1))+((A*w^2*R1^2*C1^2)/((w^2*R1^2*C1^2)+1))*sin(w*t)+((A*w*R1*C1)/((w^2*R1^2*C1^2)+1))*cos(w*t);
 Vc1=((A*w*R1*C1)/((w^2*R1^2*C1^2)+1))*exp(-t/(R1*C1))+((A)/((w^2*R1^2*C1^2)+1))*sin(w*t)-((A*w*R1*C1)/((w^2*R1^2*C1^2)+1))*cos(w*t);
 Vsum=Vr1+Vc1;
 
 figure 1
-plot(t,V_x,t,Vr1,t,Vc1,t,Vsum);
+plot(t,V_x,t,Vr1,t,Vc1);
 title('Señales de Voltajes')
 
 xlabel('t')
