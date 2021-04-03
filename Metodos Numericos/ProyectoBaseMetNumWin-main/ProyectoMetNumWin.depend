@@ -1,0 +1,267 @@
+# depslib dependency file v1.0
+1615480892 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\analizador.c
+	"cabecera.h"
+
+1615487337 c:\users\emrol\documents\desarrollo\proyectometnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1614830608 c:\users\emrol\documents\desarrollo\proyectometnumwin\tinyexpr.h
+
+1615494136 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\grafica.c
+	"cabecera.h"
+
+1615494011 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\main.c
+	"cabecera.h"
+
+1615493051 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\menus.c
+	"cabecera.h"
+
+1615495408 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\raices.c
+	"cabecera.h"
+
+1615487337 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615494943 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\tabula.c
+	"cabecera.h"
+
+1615443819 source:c:\users\emrol\documents\desarrollo\proyectometnumwin\arreglos.c
+	"cabecera.h"
+
+1615510977 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\analizador.c
+	"cabecera.h"
+
+1615506103 c:\users\kique\desktop\release_proymetnum\release_proymetnum\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1614830608 c:\users\kique\desktop\release_proymetnum\release_proymetnum\tinyexpr.h
+
+1615443819 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\arreglos.c
+	"cabecera.h"
+
+1615506158 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\grafica.c
+	"cabecera.h"
+
+1615494011 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\main.c
+	"cabecera.h"
+
+1615505362 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\menus.c
+	"cabecera.h"
+
+1615510892 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\raices.c
+	"cabecera.h"
+
+1615494943 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\tabula.c
+	"cabecera.h"
+
+1615487337 source:c:\users\kique\desktop\release_proymetnum\release_proymetnum\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615582830 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\analizador.c
+	"cabecera.h"
+
+1615582830 c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1615516114 c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\tinyexpr.h
+
+1615516114 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\arreglos.c
+	"cabecera.h"
+
+1615583208 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\grafica.c
+	"cabecera.h"
+
+1615575130 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\main.c
+	"cabecera.h"
+
+1615571798 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\menus.c
+	"cabecera.h"
+
+1615583220 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\raices.c
+	"cabecera.h"
+
+1615574753 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\tabula.c
+	"cabecera.h"
+
+1615516114 source:c:\users\josé a. sixto berroc\desktop\proyectobasemetnumwin-main\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615582830 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\analizador.c
+	"cabecera.h"
+
+1615582830 c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1615516114 c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\tinyexpr.h
+
+1615516114 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\arreglos.c
+	"cabecera.h"
+
+1615583208 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\grafica.c
+	"cabecera.h"
+
+1615575130 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\main.c
+	"cabecera.h"
+
+1615571798 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\menus.c
+	"cabecera.h"
+
+1615583220 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\raices.c
+	"cabecera.h"
+
+1615574753 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\tabula.c
+	"cabecera.h"
+
+1615516114 source:c:\users\emrol\downloads\telegram desktop\proyectobasemetnumwin-main\proyectobasemetnumwin-main\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\analizador.c
+	"cabecera.h"
+
+1615657904 c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1615657904 c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tinyexpr.h
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\arreglos.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\grafica.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\main.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\raices.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tabula.c
+	"cabecera.h"
+
+1615657904 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1615658268 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\proyectobasemetnumwin\menus.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\analizador.c
+	"cabecera.h"
+
+1616492351 c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1616480316 c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tinyexpr.h
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\arreglos.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\grafica.c
+	"cabecera.h"
+
+1616489697 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\main.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\raices.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tabula.c
+	"cabecera.h"
+
+1616480316 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1616491467 source:c:\users\emrol\documents\desarrollo\proymetnum_en_github\version_23marzo2021\proyectobasemetnumwin\menus.c
+	"cabecera.h"
+
+1616493096 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\analizador.c
+	"cabecera.h"
+
+1617474593 c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1616493096 c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\tinyexpr.h
+
+1616493096 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\arreglos.c
+	"cabecera.h"
+
+1617474199 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\main.c
+	"cabecera.h"
+
+1616871566 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\menus.c
+	"cabecera.h"
+
+1616493096 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\raices.c
+	"cabecera.h"
+
+1616493096 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\tabula.c
+	"cabecera.h"
+
+1616493096 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1616866342 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\grafica.c
+	"cabecera.h"
+
