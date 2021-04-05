@@ -21,6 +21,7 @@
  *  @author Javier E. Aviles Nunez
  */
 
+
 int main(void)
 {
     int resp = 1;
@@ -59,3 +60,40 @@ int main(void)
 
     return 0;
 }
+
+void LeeDatos_tangente(void)
+{
+    char expr[300];    /// *expr  apuntador a la cadena que contendra la expresion matematica
+    int err;            /// err    variable que indica si ubo error en la expresion leida
+    int cifras;         /// cifras Numero de cifras significatovas
+    int maxit;          /// maxit  Numero maximo de iteraciones
+    double xa;          /// xa     Valor inicial del intervalo
+    double xb;          /// xb     Valor finl del intervalo
+    int c,length;
+
+    do{
+        Menu_main(3);
+        printf("\n         Ingrese la ecuacion f(x)=  ");
+
+        fflush(stdin);
+        scanf("%s",expr);
+
+        err=Parser_error(expr);
+    }while(err != 0);
+
+
+    printf("\n         De el numero de cifras significativas n: ");
+    scanf("%d",&cifras);
+    printf("         De el numero maximo de iteraciones: ");
+    scanf("%d",&maxit);
+    printf("         De el valor inicial del intervalo xa: ");
+    scanf("%lf",&xa);
+    printf("         De el valor inicial del intervalo xb: ");
+    scanf("%lf",&xb);
+
+    tangente(expr,xa,xb,cifras,maxit);
+
+    printf("\n\n");
+    system("pause");
+}
+

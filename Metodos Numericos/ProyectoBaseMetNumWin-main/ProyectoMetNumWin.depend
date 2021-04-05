@@ -265,3 +265,44 @@
 1616866342 source:c:\users\terra\onedrive\escritorio\escuela\tercer semestre\metodos numericos\primer parcial\practica 1\proyectobasemetnumwin-main\grafica.c
 	"cabecera.h"
 
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\analizador.c
+	"cabecera.h"
+
+1617587766 d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\cabecera.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"tinyexpr.h"
+
+1617550240 d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\tinyexpr.h
+
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\arreglos.c
+	"cabecera.h"
+
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\grafica.c
+	"cabecera.h"
+
+1617553069 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\main.c
+	"cabecera.h"
+
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\menus.c
+	"cabecera.h"
+
+1617552880 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\raices.c
+	"cabecera.h"
+
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\tabula.c
+	"cabecera.h"
+
+1617550240 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\tinyexpr.c
+	"tinyexpr.h"
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+
+1617587372 source:d:\users\luis\documents\gitprojects\clases-octave\metodos numericos\proyectobasemetnumwin-main\tangente.c
+	"cabecera.h"
+

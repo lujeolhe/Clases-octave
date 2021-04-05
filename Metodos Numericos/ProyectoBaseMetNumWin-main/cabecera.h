@@ -91,8 +91,6 @@ void Biseccion(char *f,double Xa,double Xb,int cifras,int maxit);
  */
 void LeeDatos_tangente(void);
 void tangente(char *f,double Xa,double Xb,int cifras,int maxit);
-
-
 /*
  * Prototipos de las funciones de manejo de matrices
  */

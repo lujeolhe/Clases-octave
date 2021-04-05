@@ -31,10 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Metodo de la tnagente.c">
-			<Option compilerVar="CC" />
-			<Option target="Release" />
-		</Unit>
 		<Unit filename="analizador.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -56,6 +52,10 @@
 		</Unit>
 		<Unit filename="tabula.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tangente.c">
+			<Option compilerVar="CC" />
+			<Option weight="100" />
 		</Unit>
 		<Unit filename="tinyexpr.c">
 			<Option compilerVar="CC" />
