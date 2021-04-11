@@ -29,6 +29,7 @@ VReq2=I_x*Req2;
 VReq1=I_x*Req1;
 
 Vt_x=Vr1+VReq1+VReq2;
+
 %figure 1
 subplot(2,2,1)
 plot(t,V_x);

@@ -1,4 +1,6 @@
 %Ejercicio 3
+%Ejercio donde aplicamos metodo de Euler para resolver EDO en un circuito RC
+%
 FM=10000; %Frecuencia de Muestreo de la Simulacion
 
 %Teorema de Nyquis o Teroema de Muestreo:
@@ -37,7 +39,9 @@ xlabel('t')
 ylabel('V_x')
 legend('V(t)','V_{R1}','V_{C1}','Vt(t)');
 
-V_x=A*cuad(2*pi*f*t);
+%Calculo de Respuesta por metodo de Euler
+V_x=A*parabola(2*pi*f*t);
+
 q_t=zeros(1,length(t));
 dq_t=zeros(1,length(t));
 
@@ -60,25 +64,12 @@ ylabel('V_x')
 legend('V(t)','V_{C1}','V_{R1}');
 
 
-figure 3
-
-%Corriente directa
-V1_t=A1*ones(1,length(t));
-
-Vr1D=A1*exp(-t/(R1*C1));
-Vc1D=A1*(1-exp(-t/(R1*C1)));
 
 
 
-plot(t,V_x,t,Vr1D,t,Vc1D);
 
-title('Señales de Voltajes')
-
-xlabel('t')
-ylabel('V_x')
-legend('V(t)','V_{R1}','V_{C1}');
-%Hacer la integral del valor eficas a mano
-%hacer lo de el excel
-%Vrms
-%%Triangular grafica igual que la cuadrada y diente de sierra
+%Hacer la integral del valor eficas a mano pendiente 
+%hacer lo de el excel ok
+%Vrms ok
+%%Triangular grafica igual que la cuadrada y diente de sierra ok
 %
