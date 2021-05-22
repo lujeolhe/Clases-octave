@@ -11,10 +11,10 @@ FM=10000; %Frecuencia de Muestreo de la Simulacion
 
 t=0:1/FM:.05;
 
-A=120;
+A=10;
 A1=9;
 
-f=60;
+f=50;
 
 w=2*pi*f;
 %Corriente alterna
@@ -45,7 +45,7 @@ V_x=A*parabola(2*pi*f*t);
 q_t=zeros(1,length(t));
 dq_t=zeros(1,length(t));
 
-q_t(1,1)=0; %carga inicial
+q_t(1,1)=0.2*A; %carga inicial
 dq_t(1,1)=(V_x(1,1)-q_t(1,1)/C1)/R1; %corriente inicial
 
 for i=2:length(t)
