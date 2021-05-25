@@ -1,0 +1,291 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Proyecto: Ejemplo de latex
+%Colaboradores: Ljoh
+%Fecha: 26 sep 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%================================================================
+%				Tipo de documeto
+%================================================================
+\documentclass[12pt]{article}
+%10pt,12pt twocolumns
+%================================================================
+%					Preambulo
+%================================================================
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx, makecell}
+
+
+\usepackage{lipsum}
+\usepackage{float}
+
+\usepackage{mathtools}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+%\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\usepackage{multirow} % para las tablas
+%\usepackage[fleqn]{amsmath}
+\usepackage{nccmath}
+\usepackage{multicol} %Texto en multiples columnas
+
+\usepackage{graphicx} % figuras
+\usepackage{subfigure} % subfiguras
+
+%Circuitos
+\usepackage{tikz,pgfplots}
+\usepackage[europeanresistors,americaninductors]{circuitikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+
+\ctikzset{bipoles/thickness=1}%Grosor de los elementos pasivos
+\ctikzset{bipoles/length=1.2cm}%Longitud de los elementos pasivos
+\tikzstyle{every node}=[font=\normalsize] %tamaño de etiquetas
+\tikzstyle{every path}=[line width=1.25pt, line cap=round, line join=round] %caracteristicas de la linea union
+
+
+\usepackage{wasysym}
+
+
+\usepackage{xcolor}
+
+%================================================================
+%					Comandos
+%================================================================
+\definecolor{ColorRespuesta}{RGB}{12,79,182}
+\newcommand{\Respuesta}[1]{\textcolor{ColorRespuesta}{#1}}
+\newcommand{\derivada}[2]{\displaystyle{\frac{d#1}{d#2}}}
+%================================================================
+%					Margenes
+%================================================================
+\setlength{\textwidth}{170mm}%Ancho de Texto
+\setlength{\textheight}{230mm}%Largo del Texto
+\setlength{\oddsidemargin}{-5mm}%Margen de pagunas impares
+\setlength{\evensidemargin}{5mm}%Margen de páginas pares
+								%-para documentos tipo book-
+\setlength{\topmargin}{-20mm}%Margeb Superior
+
+%================================================================
+%				  Datos del Autor
+%================================================================
+\title{Circuitos electricos practica}
+\author{Luis Pablo}
+\date{\today}
+%================================================================
+%					Documento
+%================================================================
+
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+		%%Figura*********************************************************
+							%Simbologia europea o ameriaca, escala de la figura
+		\begin{circuitikz}[american,scale=1.5, transform shape]
+		    \draw (0,0) to [short,-*](0,0); %punto de voltaje -
+			\draw (0,2) to [short,*-](0,2); %punto de voltaje +
+			\draw (0,2) to [sV=$V_{i}$](0,0); %Etiqueta voltaje
+			%filtro LCL
+			\draw (0,2) to [L,l=$L_{1}$,f=$i_{L_1}$](3.1,2); %Inductacia L1 y corriente i1
+			%\draw (3.1,2) to [L,l=$L_{2}$,f=$i_{g}$](5.1,2); %Inductacia L2 y corriente ig
+			%\draw (5.1,2) to [short,-*](5.6,2); %punto de voltaje -
+			%\draw (5.6,0) to [short,*-](3.1,0); %punto de voltaje +
+			\draw (3.1,0) to [C, l=$C_{f}$, f=$i_{C_{f}}$](3.1,2); %Inductacia L2 y corriente ig
+			%\draw (0,0) to [short,-](3.1,0); %punto de voltaje +
+			\draw  (3.1,0) to [R,l=$R_1$,f=$i_{R_{1}}$](0,0);
+			%\draw (5.6,2) to [open,v=$V_{o}$](5.6,0); %Etiqueta voltaje
+
+		\end{circuitikz}
+		%%************************************************************Final Figura
+\end{figure}
+
+		\begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+		%%Figura*********************************************************
+							%Simbologia europea o ameriaca, escala de la 
+\begin{circuitikz}[european, voltage shift=0.5] 
+	\draw (0,0)
+	to[isourceC, l=$I_0$, v=$V_0$] (0,3)
+ 	to[short, -*, f=$I_0$] (2,3)
+ 	to[R=$R_1$, f>_=$i_1$] (2,0) -- (0,0);
+ 	\draw (2,3) -- (4,3)
+ 	to[R=$R_2$, f>_=$i_2$]
+ 	(4,0) to[short, -*] (2,0);
+ \end{circuitikz}
+ \bigskip
+ \\Circuito en serie\\
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)to [short,*-o](0,0)
+ 	to[R=$R_1$] (2,0)
+ 	to[R=$R_2$] (4,0)
+ 	to[R=$R_3$] (6,0)
+ 	to [short,*-o](6,0);
+ 	
+ \end{circuitikz}
+  \bigskip
+  \end{figure}
+  
+		\begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+		%%Figura*********************************************************
+\bigskip		%Simbologia europea o ameriaca, escala de la 
+Circuito en paralelo\\
+\bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)to [short,*-o](0,0)
+ 	 to [short,-*] (0.5,0)
+ 	 to[R=$R_2$] (2,0)
+ 	 to [short,-*] (2,0)
+ 	 to [short,*-o](2.5,0)
+ 	 (0.5,0)--(0.5,1)
+ 	 (0.5,0)--(0.5,-1)
+ 	 ;
+ 	 \draw (0.5,1)
+ 	 to[R=$R_1$] (2,1)
+ 	 (2,1)--(2,0);
+ 	 
+ 	 \draw (0.5,-1)
+ 	 to[R=$R_3$] (2,-1)
+ 	 (2,-1)--(2,0);
+ 	
+ \end{circuitikz}
+ \bigskip 
+
+ Circuito serie-paralelo\\
+ \bigskip
+  \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)to [short,*-o](0,0)
+ 	 to[R=$R_2$,-*] (2,0)
+ 	 (2,0)--(2,1)
+ 	 (2,0)--(2,-1);
+ 	 
+ 	 \draw (2,1)
+ 	 to[R=$R_1$] (4,1)
+ 	 to[short,-*](4,0)
+ 	 to[short,*-o](4.5,0) 	 ;
+ 	 
+ 	 \draw (2,-1)
+ 	 to[R=$R_3$] (4,-1)
+ 	 (4,-1)--(4,0);
+ 	
+ \end{circuitikz}
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)to [short,*-o](0,0)
+ 	 to [short,-*] (0.5,0)
+ 	 (0.5,0)--(0.5,0.5)
+ 	 (0.5,0)--(0.5,-0.5);
+ 	 
+ 	 \draw (0.5,0.5)
+ 	 to[R=$R_1$] (2,0.5)
+ 	 to[R=$R_2$] (3,0.5)
+ 	 (3,0.5)--(3.5,0.5)
+ 	 (3.5,0.5)--(3.5,0);
+ 	 
+ 	 \draw (0.5,-0.5)
+ 	 to[R=$R_3$] (2,-0.5)
+ 	 to[R=$R_4$] (3,-0.5)
+	 (3,-0.5)--(3.5,-0.5)
+ 	 (3.5,-0.5)to [short,-*](3.5,0)
+ 	 to[short,*-o](4,0);
+ 	
+ \end{circuitikz}
+ \bigskip
+ 
+ Conexion estrella\\
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,2)to [short,*-o](0,2)
+	to[R=$R_1$,-*] (0,0);
+ 	 \draw (-1.5,-1.5)
+ 	 to[short,*-o](-1.5,-1.5)
+ 	 to[R=$R_2$] (0,0);
+ 	 
+ 	 \draw (0,0)
+ 	 to[R=$R_3$,*-o] (1.5,-1.5);
+ 	
+ \end{circuitikz}
+ \end{figure}
+ \begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+ Conexion triangulo\\
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)to [short,-*](0,0)
+	to[R=$R_1$,-*] (2.5,0);
+	
+ 	 \draw (0,0)
+ 	 to[R=$R_2$,-*] (1.25,2.5)
+ 	 to[R=$R_2$] (2.5,0);
+ 	
+ \end{circuitikz}
+ \bigskip
+ \\Conexion en Uve\\
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,0)
+	to [short,-*](0,0)
+	to [short,*-o](0,2);
+	
+ 	 \draw (0,0)
+ 	 to[R=$R_2$,*-o] (1.5,1.5);
+ 	 
+ 	 \draw (-1.5,1.5)
+ 	 to [short,*-o](-1.5,1.5)
+ 	 to[R=$R_1$,-*] (0,0);
+ 	
+ \end{circuitikz}
+ 
+ \bigskip
+ Conexion en Zigzag\\
+ \bigskip
+ \begin{circuitikz}[european,scale=1.5, transform shape] 
+	\draw (0,1.5)
+	to [R=$R_5$](0,0)
+	to [short,*-o](0,0)
+	(0,1.5) --(1.5,2)
+	(1.5,3.5)
+	to [short,*-o](1.5,3.5)
+	to [R=$R_3$](1.5,2)
+	(0,0)--(-1.5,0)
+	(0,0)--(1.5,0);
+	
+	\draw (-1.5,1.5)
+	to [R=$R_4$](-1.5,0)
+	(-1.5,1.5) --(0,2)
+	(0,3.5)
+	to [short,*-o](0,3.5)
+	to [R=$R_2$](0,2);
+	
+	\draw (1.5,1.5)
+	to [R=$R_6$](1.5,0)
+	(1.5,1.5) --(-1.5,2)
+	(-1.5,3.5)
+	to [short,*-o](-1.5,3.5)
+	to [R=$R_1$](-1.5,2);
+	
+	
+ 	
+ \end{circuitikz}
+ 
+		%%************************************************************Final Figura
+		
+	\end{figure}
+	
+
+\end{document}
