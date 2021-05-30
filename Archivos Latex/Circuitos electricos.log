@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.2.24)  24 MAY 2021 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.2.24)  29 MAY 2021 15:40
 entering extended mode
 **"./Circuitos electricos.tex"
 (Circuitos electricos.tex
@@ -1106,12 +1106,26 @@ LaTeX Font Info:    Trying to load font information for U+wasy on input line 92
 (C:\Users\terra\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
+(Circuitos electricos.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 101.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 101.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 101.
+(Font)              <6> on input line 2.
+)
+\tf@lof=\write4
+\openout4 = `"Circuitos electricos.lof"'.
+
+ (Circuitos electricos.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@toc=\write5
+\openout5 = `"Circuitos electricos.toc"'.
+
 \absfshift=\dimen342
 \absfshift=\dimen343
 \absfshift=\dimen344
@@ -1119,26 +1133,26 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \absfshift=\dimen346
 \absfshift=\dimen347
 \absfshift=\dimen348
+ [1
 
-[1
-
-{C:/Users/terra/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
-(Circuitos electricos.aux
+{C:/Users/terra/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] [4] (Ci
+rcuitos electricos.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 42639 strings out of 479334
- 1144604 string characters out of 2857084
- 1915553 words of memory out of 3000000
- 59516 multiletter control sequences out of 15000+200000
- 439355 words of font info for 74 fonts, out of 3000000 for 9000
+ 42656 strings out of 479334
+ 1145005 string characters out of 2857084
+ 1909120 words of memory out of 3000000
+ 59526 multiletter control sequences out of 15000+200000
+ 451364 words of font info for 78 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,9n,89p,781b,1111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,9n,89p,781b,1113s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/terra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
 nc}{C:/Users/terra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
 C:/Users/terra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
 C:/Users/terra/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
+sers/terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/U
 sers/terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/U
 sers/terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Us
 ers/terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Use
@@ -1147,9 +1161,9 @@ s/terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users
 /terra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/t
 erra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/ter
 ra/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on "Circuitos electricos.pdf" (3 pages, 115732 bytes).
+Output written on "Circuitos electricos.pdf" (4 pages, 142810 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
