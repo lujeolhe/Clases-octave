@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Proyecto: Ejemplo de latex
+%Colaboradores: Ljoh
+%Fecha: 26 sep 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%================================================================
+%				Tipo de documeto
+%================================================================
+\documentclass[12pt]{article}
+%10pt,12pt twocolumns
+%================================================================
+%					Preambulo
+%================================================================
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx, makecell}
+
+\usepackage{mathtools}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+%\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\usepackage{multirow} % para las tablas
+%\usepackage[fleqn]{amsmath}
+\usepackage{nccmath}
+\usepackage{setspace}
+%Circuitos
+%\usepackage{tikz}
+%\usepackage{circuitickz}
+
+\usepackage{wasysym}
+
+\usepackage[usenames]{color}
+%================================================================
+%					Comandos
+%================================================================
+\definecolor{ColorRespuesta}{RGB}{12,79,182}
+\newcommand{\Respuesta}[1]{\textcolor{ColorRespuesta}{#1}}
+\newcommand{\derivada}[2]{\displaystyle{\frac{d#1}{d#2}}}
+\newcommand{\e}[1]{e^{#1}}
+\newcommand{\integral}[4]{\displaystyle{\int_{#1}^{#2}{#3}{#4}}}
+\newcommand{\escribir}[1]{\singlespacing#1\singlespacing}
+\newcommand{\fraccion}[2]{\displaystyle{\frac{#1}{#2}}}
+%================================================================
+%					Margenes
+%================================================================
+\setlength{\textwidth}{170mm}%Ancho de Texto
+\setlength{\textheight}{230mm}%Largo del Texto
+\setlength{\oddsidemargin}{-5mm}%Margen de pagunas impares
+\setlength{\evensidemargin}{5mm}%Margen de páginas pares
+								%-para documentos tipo book-
+\setlength{\topmargin}{-20mm}%Margeb Superior
+
+%================================================================
+%				  Datos del Autor
+%================================================================
+\title{Metodo del trapecio \\Demostracion de la Integral}
+\author{Luis Pablo}
+%\date{\today}
+%================================================================
+%					Documento
+%================================================================
+
+
+\begin{document}
+
+\maketitle
+	\escribir{Recuerde que una línea recta se puede representar como}
+	$f_1(x)=f(a)+\fraccion{f(b)-f(a)}{b-a}(x-a)$\\
+	\escribir{Se puede expresar como:}
+	$f_1(x)=\fraccion{f(b)-f(a)}{b-a}x+f(a)-\fraccion{af(b)-af(a)}{b-a}$
+	\escribir{Agrupando los \'ultimos dos t\'erminos:}
+	$f_1(x)=\fraccion{f(b)-f(a)}{b-a}x+\fraccion{bf(a)-af(a)-af(b)+af(a)}{b-a}$
+	\escribir{o}
+	$f_1(x)=\fraccion{f(b)-f(a)}{b-a}x+\fraccion{bf(a)-af(b)}{b-a}$
+	\escribir{la cual puede integrarse entre $x$ = a y $x$ = b para obtener:}
+	$I=\left[\fraccion{f(b)-f(a)}{b-a}\fraccion{x^2}{2}+\fraccion{bf(a)-af(b)}{b-a}x\right]_{b}^{a}$
+	
+	\escribir{Este resultado se evalúa para dar:}
+	$I=\fraccion{f(b)-f(a)}{b-a}\fraccion{(b^2-a^2)}{2}+\fraccion{bf(a)-af(b)}{b-a}(b-a) $
+	\escribir{Ahora, como $b^2-a^2=(b-a)(b+a)$}
+	$I=[f(b)-f(a)]\fraccion{b+a}{2}+bf(a)-af(b)$
+	\escribir{Multiplicando y agrupando t\'erminos se tiene:}
+	$I=(b-a)\fraccion{f(a)+f(b)}{2}$
+	\escribir{que es la fórmula para la regla del trapecio.}
+	
+
+\end{document}
