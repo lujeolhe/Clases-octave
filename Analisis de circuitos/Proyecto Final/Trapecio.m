@@ -1,6 +1,6 @@
 %Metodo de Integracion de Trapecio
 close all
-h=1;
+h=0.01;
 x=0:h:5;
 y=zeros(1,length(x)-1);
 y_x=zeros(1,length(x));
@@ -10,12 +10,8 @@ y_x(1)=0.1679+exp(0);
 for i=1:n
     if i<n
     b=x(i+1)/(x(i+1).^2+9);
-    x(i+1)
-    b
     a=x(i)/(x(i).^2+9);
-    x(i)
-    a
-    A=A+(x(i+1)-x(i))*((b+a)/2)
+    A=A+(x(i+1)-x(i))*((b+a)/2);
     endif
   if i>1
     y_x(i)=0.1679+exp(-A);
@@ -36,7 +32,7 @@ x_2=0:1/1000:5;
   y0(1)=1.16794;
   yp(1)=-x(1)/(x(1).^2+9)*(y0(1));
   for i=2:n
-    y0(i)=y0(i-1)+h*yp(i-1) 
+    y0(i)=y0(i-1)+h*yp(i-1);
     yp(i)=-x(i)/(x(i).^2+9)*(y0(i));
   endfor
   figure 2
