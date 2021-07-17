@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Proyecto: Ejemplo de latex
+%Colaboradores: Ljoh
+%Fecha: 26 sep 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%================================================================
+%				Tipo de documeto
+%================================================================
+\documentclass[12pt]{article}
+%10pt,12pt twocolumns
+%================================================================
+%					Preambulo
+%================================================================
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+
+\usepackage{multicol}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx, makecell}
+
+
+\usepackage{lipsum}
+\usepackage{float}
+
+\usepackage{mathtools}
+\usepackage{amssymb, amsmath, amsbsy} % simbolitos
+%\usepackage{upgreek} % para poner letras griegas sin cursiva
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\usepackage{multirow} % para las tablas
+%\usepackage[fleqn]{amsmath}
+\usepackage{nccmath}
+\usepackage{multicol} %Texto en multiples columnas
+
+\usepackage{graphicx} % figuras
+\usepackage{subfigure} % subfiguras
+
+%Circuitos
+\usepackage{tikz,pgfplots}
+\usepackage[europeanresistors,americaninductors]{circuitikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+
+\ctikzset{bipoles/thickness=1}%Grosor de los elementos pasivos
+\ctikzset{bipoles/length=1.2cm}%Longitud de los elementos pasivos
+\tikzstyle{every node}=[font=\normalsize] %tamaño de etiquetas
+\tikzstyle{every path}=[line width=1.25pt, line cap=round, line join=round] %caracteristicas de la linea union
+
+\usepackage{wasysym}
+
+\usepackage{xcolor}
+%================================================================
+%					Comandos
+%================================================================
+\definecolor{ColorRespuesta}{RGB}{12,79,182}
+\newcommand{\Respuesta}[1]{\textcolor{ColorRespuesta}{#1}}
+\newcommand{\derivada}[2]{\displaystyle{\frac{d#1}{d#2}}}
+\newcommand{\e}[1]{e^{#1}}
+\newcommand{\integral}[4]{\displaystyle{\int_{#1}^{#2}{#3}{#4}}}
+\newcommand{\escribir}[1]{\singlespacing #1 \singlespacing}
+\newcommand{\fraccion}[2]{\displaystyle{\frac{#1}{#2}}}
+\newcommand{\tam}[1]{\Large\raggedright #1}
+\newcommand{\sub}[1]{\fcolorbox{black}{red}{#1}}
+%================================================================
+%					Margenes
+%================================================================
+\setlength{\textwidth}{170mm}%Ancho de Texto
+\setlength{\textheight}{230mm}%Largo del Texto
+\setlength{\oddsidemargin}{-5mm}%Margen de paginas impares
+\setlength{\evensidemargin}{5mm}%Margen de páginas pares
+								%-para documentos tipo book-
+\setlength{\topmargin}{-30mm}%Margeb Superior
+
+%================================================================
+%				  Datos del Autor
+%================================================================
+\title{Analisis de circuitos electricos}
+\author{Luis Pablo González Gálvez}
+
+%================================================================
+%					Documento
+%================================================================
+\begin{document}
+\maketitle
+%Indice de figuras:
+	\listoffigures
+	%%\tableofcontents
+	\section{Circuitos Electricos}
+	\subsection{Circuitos RC}
+	\bigskip
+%%Circuito 1
+\begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+		%%Figura*********************************************************
+							%Simbologia europea o ameriaca, escala de la figura
+		\begin{circuitikz}[american,scale=2.5, transform shape]
+		    \draw (0,0) to [short,-*](0,0); %punto de voltaje -
+			\draw (0,2) to [short,*-](0,2); %punto de voltaje +
+			\draw (0,2) to [sV=$V$](0,0); %Etiqueta voltaje
+			%filtro LCL
+			\draw (0,2) to [R,l=$R_{1}$,f=$i_{R_1}$](3.1,2); %Inductacia L1 y corriente i1
+			%\draw (3.1,2) to [L,l=$L_{2}$,f=$i_{g}$](5.1,2); %Inductacia L2 y corriente ig
+			%\draw (5.1,2) to [short,-*](5.6,2); %punto de voltaje -
+			%\draw (5.6,0) to [short,*-](3.1,0); %punto de voltaje +
+			\draw (3.1,2) to [C, l=$C$, f=$i_{C}$](3.1,0); %Inductacia L2 y corriente ig
+			\draw (3.1,2)to[short,-](5.1,2);
+			\draw  (5.1,2) to [R,l=$R_2$,f=$i_{R_{2}}$](5.1,0);
+			\draw (5.1,0) to [short,-](0,0); 
+		\end{circuitikz}
+		\caption{RCSimple}
+ 		\label{RCSimple}
+		%************************************************************Final Figura
+\end{figure}
+\bigskip
+
+
+\tam{}Se tiene los siguientes valores de los componentes:\\
+
+$V_d=5v$ \'o $V_a=5sin(2\pi60t) $\\
+$R_1=100 \Omega, R_2=10 \Omega, C=20\mu f $\\
+Se utiliza la ley de Kirchhorff de la corrientes.\\
+$\sum I_e=\sum I_s$\\
+$\Rightarrow I_{R_1}= I_C + I_{R_2}$\\
+Donde:\\
+\bigskip
+$I_{R_1}=\fraccion{V_{R_1}}{R_1},I_C=C\derivada{V_c}{t} ,I_{R_2}=\fraccion{V_{R_2}}{R_2} $\\
+\bigskip
+Poner todo en funcion de $V_c$\\
+Usando la ley de los Voltajes de Kirchhoff\\
+$-V+V_{R_1}+V_C=0$\\
+$V_{R_1}=V-V_c$\\
+$V_{R_2}=V_c$
+Por lo tanto:\\
+\bigskip
+$I_{R_1}=\fraccion{V-V_C}{R_1}, I_C=C\derivada{V_c}{t} , I_{R_2}=\fraccion{V_C}{R_2} $\\
+\bigskip
+Sustituimos en la ecuacion de la ley de las corrientes:\\
+\bigskip
+$\fraccion{V-V_C}{R_1}=C\derivada{V_c}{t} +\fraccion{V_C}{R_2} $\\
+\bigskip
+Se procede a quitar la C de la derivada:\\
+\bigskip
+$\fraccion{1}{C}(\fraccion{V-V_C}{R_1}=C\derivada{V_c}{t} +\fraccion{V_C}{R_2}) $\\
+\bigskip
+Procedemos a colocar bien la ecuacion diferencial: \\
+\bigskip
+$\derivada{V_c}{t} +\fraccion{V_C}{CR_2}- \fraccion{V}{CR_1}+\fraccion{V_C}{CR_1}=0 $\\
+\bigskip
+\bigskip
+$\derivada{V_c}{t} +\fraccion{R_1+R_2}{CR_2R_1}V_c=\fraccion{V}{CR_1} $\\
+\bigskip
+Se procede a resolver la ecuacion diferencial:
+Primero se resulve de forma Homogenia.\\
+\bigskip
+$\derivada{V_c}{t} +\fraccion{R_1+R_2}{CR_2R_1} V_c=0 $\\
+\bigskip
+Se considera $K=\fraccion{R_1+R_2}{CR_2R_1}$\\
+\bigskip
+Se utiliza el metodo de variables separables:\\
+\bigskip
+$\derivada{V_c}{t} =-K V_c $\\
+\bigskip
+$\int \fraccion{dV_c}{KV_c}=\integral{0}{t}{-1}{dt}$\\
+\bigskip
+$\fraccion{1}{K} ln(V_C)+ln(A)=-t$\\
+\bigskip
+$\fraccion{1}{K} ln(V_C*A)=-t$\\
+\bigskip
+$ln(V_C*A)=-tK$\\
+\bigskip
+$V_C*A=\e{-tK}$\\
+La respuesta es:\\
+\bigskip
+\sub{$V_C=A\e{-tK}$}\\
+\bigskip
+Para la respuesta particular de la ecuacion diferencial:\\
+$V_C=b$\\
+$Kb=\fraccion{V_C}{CR_1}$\\
+\bigskip
+$b=\fraccion{V_C}{CR_1K}=\fraccion{V_CR_2}{R_1+R_2}$\\
+\bigskip
+La ecuacion completa es:\\
+\bigskip
+\sub{$V_C=A\e{-tK}+\fraccion{V_CR_2}{R_1+R_2}$}\\
+\bigskip
+Para el Voltaje en corriente alterna el Voltaje es:\\
+$V_a=5sin(2\pi60t) $\\
+Como ya se tiene la solucion Homogenia se busca la solucion particular
+$V_C=Asin(\omega t)+Bcos(\omega t)$\\
+\bigskip
+$\derivada{V_c}{t}=A\omega cos(\omega t)-B\omega sin(\omega t)$\\
+\bigskip
+Se sustituye en la ecuacion (1)\\
+\bigskip
+$\derivada{V_c}{t}+KV_C=5sin(\omega t)$\\
+\bigskip
+$A\omega cos(\omega t)-B\omega sin(\omega t)+AKsin(\omega t)+BKcos(\omega t)=5sin(\omega t)$\\
+\bigskip
+Ahora se separan por los que tienen las mismas funciones trigonometricas\\
+$-B\omega sin(\omega t)+AKsin(\omega t)=5sin(\omega t)$\\
+$A\omega cos(\omega t)+BKcos(\omega t)=0$\\
+\bigskip
+Se factorizan las funciones y queda esto:\\
+$-B\omega+AK=5$\\
+$BK+A\omega=0$\\
+\bigskip
+Se quitan las K y $\omega$ de las B para poder resolverlo por sumas de sistemas de ecuaciones\\
+\bigskip
+$-B+A\fraccion{K}{\omega}=\fraccion{5}{\omega}$\\
+\bigskip
+$B+A\fraccion{\omega}{K}=0$\\
+\bigskip
+$A(\fraccion{K}{\omega}+\fraccion{\omega}{K})=\fraccion{5}{\omega}$\\
+\bigskip
+$A(\fraccion{K^2+\omega ^2}{\omega K })=\fraccion{5}{\omega}$\\
+\bigskip
+$A=\fraccion{5K}{K^2+\omega ^2}$\\
+\bigskip
+Sustituimos A en una de las ecuaciones anteriores.\\
+$B=-A\fraccion{\omega}{K}$\\
+\bigskip
+$B=-\fraccion{5K\omega}{K(K^2+\omega ^2)}$\\
+\bigskip
+$B=-\fraccion{5\omega}{K^2+\omega ^2}$\\
+\bigskip
+Por lo que la ecuacion para un voltaje alterno es:
+\sub{$V_c=A\e{-tK}+\fraccion{5K}{K^2+\omega ^2}sin(\omega t)-\fraccion{5\omega}{K^2+\omega ^2}cos(\omega t)$}\\
+\bigskip
+
+\begin{figure}[htb]%h: here, t: top al principio de la pagina, b: al final de la página, !
+		\centering %alineación 
+		%%Figura*********************************************************
+							%Simbologia europea o ameriaca, escala de la figura
+		\begin{circuitikz}[american,scale=2.5, transform shape]
+		    \draw (0,0) to [short,-*](0,0); 
+			\draw (0,2) to [short,*-](0,2); 
+			\draw (0,2) to [sV=$V$](0,0); 
+			\draw (0,2) to [R,l=$R_{1}$,f=$i_{R_1}$](3.1,2); 
+			\draw (3.1,2) to [C, l=$C$, f=$i_{C}$](3.1,0); 
+			\draw (3.1,2)to[short,-](5.1,2);
+			\draw  (5.1,2) to [R,l=$R_2$,f=$i_{R_{2}}$](5.1,0);
+			\draw (5.1,0) to [short,-](0,0); 
+		\end{circuitikz}
+		\caption{RCSimple}
+ 		\label{RCSimple}
+		%************************************************************Final Figura
+\end{figure}
+\bigskip
+\end{document}
